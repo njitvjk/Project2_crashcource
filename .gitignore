@@ -3,3 +3,4 @@
 .local
 .pytest_cache
 .ash_history
+__pycache__
