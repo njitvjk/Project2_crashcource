@@ -18,17 +18,15 @@ def test_calculator_add():
 def test_calculator_get_result():
     """Testing the Get result method of the calculator"""
     calc = Calculator()
-    calc.add_number(1)
-    assert calc.get_result() == 1
+    assert calc.get_result() == 0
 
 def test_calculator_subtract():
     """Testing the subtract method of the calculator"""
     calc = Calculator()
     calc.subtract_number(1)
     assert calc.get_result() == -1
-
-def test_calculator_multiplication():
-    """ testing multiplication"""
+def test_calculator_multiply():
+    """ tests multiplication of two numbers"""
     calc = Calculator()
-    calc.multiply_numbers(1,2)
-    assert calc.get_result() == 2
+    result  = calc.multiply_numbers(1,2)
+    assert result == 2
