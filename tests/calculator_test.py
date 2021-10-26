@@ -11,9 +11,9 @@ def test_calculator_add():
     #Arrange by instantiating the calc class
     calc = Calculator()
     #Act by calling the method to be tested
-    calc.add_number(1)
+    calc.add_number(4)
     #Assert that the results are correct
-    assert calc.result == 1
+    assert calc.result == 4
 
 def test_calculator_get_result():
     """Testing the Get result method of the calculator"""
@@ -26,3 +26,9 @@ def test_calculator_subtract():
     calc = Calculator()
     calc.subtract_number(1)
     assert calc.get_result() == -1
+
+def test_calculator_multiplication():
+    """ testing multiplication"""
+    calc = Calculator()
+    calc.multiply_numbers(1,2)
+    assert calc.get_result() == 2
