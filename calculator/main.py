@@ -1,46 +1,26 @@
-"""Tests file """
-import unittest
-from calculator.main import Calculator
+"""Calculator program """
 
-class TestApp(unittest.TestCase):
-    """Test for Calculator program"""
-    def setUp(self):
-        """Initialization"""
-        #Arrange
-        self.num_1 = 10
-        self.num_2 = 5
-    def test_0001_add(self):
-        """Case1:Addition"""
-        #Act
-        calc=Calculator()
-        result = calc.addition(self.num_1, self.num_2)
-        #Assert
-        self.assertEqual(result, 15)
-    def test_0002_subtract(self):
-        """Case2 :Subtraction"""
-        calc = Calculator()
-        result = calc.subtraction(self.num_1, self.num_2)
-        self.assertEqual(result, 5)
-    def test_0003_subtract_negativevalue(self):
-        """Case3 :Subtraction_negativeoutput"""
-        calc = Calculator()
-        result = calc.subtraction(self.num_2, self.num_1)
-        self.assertEqual(result, -5)
-    def test_0004_multiply(self):
-        """Case4 :Multiplication"""
-        calc = Calculator()
-        result = calc.multiplication(self.num_1, self.num_2)
-        self.assertEqual(result, 50)
-    def test_0005_division(self):
-        """Case5 :Division"""
-        calc = Calculator()
-        result = calc.division(self.num_1, self.num_2)
-        self.assertEqual(result, 2)
-    def test_0006_divisionbyzero(self):
-        """Case6 :Divisionbyzero"""
-        calc=Calculator()
-        result = calc.division(1,0)
-        self.assertRaises(Exception,result)
+class Calculator:
+    """Class with arithematic operations """
+    output=0
+    def addition(self, num_1:int, num_2:int):
+        """Perform addition operation on num_1 and num_2"""
+        self.output=num_1+num_2
+        return self.output
+    def subtraction(self, num_1:int, num_2:int):
+        """Perform subtraction operation on num_! and num_2 """
+        self.output = num_1 - num_2
+        return self.output
+    def division(self, num_1:int, num_2:int):
+        """Perform division operation on num_1 and num_2"""
+        #if b == 0:
+        try:
+            self.output = num_1/num_2
+            return self.output
+        except ZeroDivisionError as ex_div:
+            return ex_div
 
-if __name__ == '__main__':
-    unittest.main()
+    def multiplication(self, num_1:int, num_2:int):
+        """Perform multiplication operation on a and b """
+        self.output = num_1 *num_2
+        return self.output
