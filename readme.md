@@ -1,13 +1,11 @@
-# Calculator Project Setup
-[![Build Status](https://app.travis-ci.com/kaw393939/calc2.svg?branch=main)](https://app.travis-ci.com/kaw393939/calc2)
 
-Run Pip Install
-pip install -r requirements.txt
+# Homework-Python
+## Calculator Program
 
-To run tests, Lint, and Coverage report use this command:
+[![Build Status](https://app.travis-ci.com/njitvjk/calc2.svg?branch=main)](https://app.travis-ci.com/njitvjk/calc2)
 
-pytest  --pylint --cov
-
-.pylintrc is the config for pylint
-.coveragerc is the config for coverage
-setup.py is a config file for pytest
+### Operations
+Addition
+Subtraction
+Mulitplication
+Divison with execption for Division by zero
