@@ -1,30 +1,26 @@
-""" This is the increment function"""
+"""Calculator program """
+
 class Calculator:
-    """ This is the Calculator class"""
-
-    output = 0
-    def get_result(self):
-        """ Get Result of Calculation"""
+    """Class with arithematic operations """
+    output=0
+    def addition(self, num_1:int, num_2:int):
+        """Perform addition operation on num_1 and num_2"""
+        self.output=num_1+num_2
         return self.output
-
-    def addition(self, num_x,num_y):
-        """ adds x and y and stores the value in output"""
-        #self.result = self.result + value_a
-        self.output = num_x + num_y
+    def subtraction(self, num_1:int, num_2:int):
+        """Perform subtraction operation on num_! and num_2 """
+        self.output = num_1 - num_2
         return self.output
-    def subtraction(self,num_x,num_y):
-        """ subtract y from x and stores the value in output """
-        self.output = num_x - num_y
-        return self.output
-    def multiplication(self, num_x, num_y):
-        """ multiply x and y and store the value in output"""
-        self.output = num_x * num_y
-        return self.output
-    def division(self, num_x, num_y):
-        """ divide two numbers and store the value in output,Exception handler for divide by zero"""
+    def division(self, num_1:int, num_2:int):
+        """Perform division operation on num_1 and num_2"""
+        #if b == 0:
         try:
-            self.output = num_x / num_y
+            self.output = num_1/num_2
             return self.output
-        except ZeroDivisionError as division_exception:
-            print("Exception:Invalid Input")
-            return division_exception
+        except ZeroDivisionError as ex_div:
+            return ex_div
+
+    def multiplication(self, num_1:int, num_2:int):
+        """Perform multiplication operation on a and b """
+        self.output = num_1 *num_2
+        return self.output
