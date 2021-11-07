@@ -5,7 +5,7 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 script:
-  - pytest -s --pylint --cov
+  - pytest --pylint --cov
 
 branches:
   only:
