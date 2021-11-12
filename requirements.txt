@@ -2,4 +2,4 @@ pytest-cov
 pytest
 pycodestyle
 pytest-pylint
-python-coveralls
+coveralls
