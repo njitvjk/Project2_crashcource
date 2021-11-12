@@ -13,4 +13,7 @@ branches:
     - development
     - calc_part2
 
+after_success:
+  - codecov
+
 
