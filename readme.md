@@ -1,18 +1,13 @@
-
-# Homework-Python
-## Calculator Program
+# Assignment 2-Create an Improved Calculator With History
 
 [![Build Status](https://app.travis-ci.com/njitvjk/calc2.svg?branch=main)](https://app.travis-ci.com/njitvjk/calc2)
 
 
-Update:After Second assignnment build , the badge is pointing to latest build which is calc2. Hence pasting the build link. Please click below to view the build for this assignment
-
-[build for first assignmnet](https://app.travis-ci.com/github/njitvjk/calc2/builds/241320285)
-
-### Operations
-Addition
-Subtraction
-Mulitplication
-Divison with execption for Division by zero
+#### Operations
+1. Branch- calc_part2 <br/>
+2. Static methods- Get History ,Get Last Calculation,Get last calculation result,get last calculation object,clear history,count  history,addition,subtraction,multiplication,division<br/>
+3. Parent class stores values a and b and factory while child perform operations<br/>
+4. Test cases covered for every operations with 100% coverage<br/>
+5. fixtures used in the program
 
 
