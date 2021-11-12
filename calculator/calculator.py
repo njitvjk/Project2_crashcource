@@ -34,26 +34,33 @@ class Calculator:
     def get_result_of_last_calculation():
         """ Task 6: Get last calculation result"""
         return Calculator.history[-1].get_output()
-
+    @staticmethod
+    def get_last_calculation():
+        """ Task 7: returns last calculation result"""
+        return Calculator.history[-1].get_output()
+    @staticmethod
+    def get_last_calculation_object():
+        """ Task 8: returns last calculation result"""
+        return Calculator.history[-1].get_output()
     @staticmethod
     def add_numbers(value_a, value_b):
-        """ Task 7: Add two numbers"""
+        """ Task 9: Add two numbers"""
         addition = Addition.create(value_a,value_b)
         Calculator.add_calculation_to_history(addition)
         return Calculator.get_result_of_last_calculation()
     @staticmethod
     def subtract_number(value_a, value_b):
-        """ Task 8: Subtract two numbers"""
+        """ Task 10: Subtract two numbers"""
         subtraction = Subtraction.create(value_a, value_b)
         Calculator.add_calculation_to_history(subtraction)
         return Calculator.get_result_of_last_calculation()
     @staticmethod
     def multiply_numbers(value_a, value_b):
-        """Task 9: Multiply two numbers"""
+        """Task 11: Multiply two numbers"""
         Calculator.add_calculation_to_history(Multiplication.create(value_a,value_b))
         return Calculator.get_result_of_last_calculation()
     @staticmethod
     def divide_numbers(value_a, value_b):
-        """ Task 10: Divide two numbers"""
+        """ Task 12: Divide two numbers"""
         Calculator.add_calculation_to_history(Division.create(value_a,value_b))
         return Calculator.get_result_of_last_calculation()
