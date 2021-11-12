@@ -15,8 +15,7 @@ Mulitplication
 Divison with exception for Division by zero
 
 #### Files for this assignment to review code
-##### calculator/main.py
-##### tests/calculator_test1.py ( changed this file name from calculator_test to calculator_test1 inorder to build my second assignment)
+1.calculator/main.py         2.tests/calculator_test1.py ( changed this file name from calculator_test to calculator_test1 inorder to build my second assignment)
 
 
 
