@@ -11,3 +11,6 @@ branches:
   only:
     - main
     - development
+    - calc_part2
+
+

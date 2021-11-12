@@ -1,54 +1,46 @@
-"""Testing the Calculator"""
+"""Tests file """
+import unittest
 from calculator.main import Calculator
-#Arrange
-NUM1=5
-NUM2=10
 
-def calculator_result():
-    """testing calculator result is 0"""
-    #Act
-    calc = Calculator()
-    #Assert
-    assert calc.output == 0
+class TestApp(unittest.TestCase):
+    """Test for Calculator program"""
+    def setUp(self):
+        """Initialization"""
+        #Arrange
+        self.num_1 = 10
+        self.num_2 = 5
+    def test_0001_add(self):
+        """Case1:Addition"""
+        #Act
+        calc=Calculator()
+        result = calc.addition(self.num_1, self.num_2)
+        #Assert
+        self.assertEqual(result, 15)
+    def test_0002_subtract(self):
+        """Case2 :Subtraction"""
+        calc = Calculator()
+        result = calc.subtraction(self.num_1, self.num_2)
+        self.assertEqual(result, 5)
+    def test_0003_subtract_negativevalue(self):
+        """Case3 :Subtraction_negativeoutput"""
+        calc = Calculator()
+        result = calc.subtraction(self.num_2, self.num_1)
+        self.assertEqual(result, -5)
+    def test_0004_multiply(self):
+        """Case4 :Multiplication"""
+        calc = Calculator()
+        result = calc.multiplication(self.num_1, self.num_2)
+        self.assertEqual(result, 50)
+    def test_0005_division(self):
+        """Case5 :Division"""
+        calc = Calculator()
+        result = calc.division(self.num_1, self.num_2)
+        self.assertEqual(result, 2)
+    def test_0006_divisionbyzero(self):
+        """Case6 :Divisionbyzero"""
+        calc=Calculator()
+        result = calc.division(1,0)
+        self.assertRaises(Exception,result)
 
-def calculator_add():
-    """Testing the Add function of the calculator"""
-    #Arrange by instantiating the calc class
-    calc = Calculator()
-    #Act by calling the method to be tested
-    calc.addition(NUM1,NUM2)
-    #Assert that the results are correct
-    assert calc.output == 15
-
-def calculator_get_result():
-    """Testing the Get result method of the calculator"""
-    calc = Calculator()
-    assert calc.get_result() == 0
-
-def calculator_subtract():
-    """Testing the subtract method of the calculator"""
-    calc = Calculator()
-    calc.subtraction(NUM2,NUM1)
-    assert calc.get_result() == 5
-
-def calculator_multiply():
-    """ tests multiplication of two numbers"""
-    calc = Calculator()
-    result  = calc.multiplication(NUM1,NUM2)
-    assert result == 50
-
-def calculator_divide():
-    """ tests multiplication of two numbers"""
-    calc = Calculator()
-    result = calc.division(NUM2, NUM1)
-    assert result == 2
-
-def calculator_subtractnegative():
-    """Testing the subtract method of the calculator"""
-    calc = Calculator()
-    calc.subtraction(NUM1,NUM2)
-    assert calc.get_result() == -5
-
-def calculator_divisionbyzero(self):
-    """Testing division by zero"""
-    self.assertRaises(ZeroDivisionError, calculator_divide(), 1, 0)
+if __name__ == '__main__':
+    unittest.main()
