@@ -12,3 +12,4 @@ branches:
     - main
     - development
     - branch1
+    - calc_part2
