@@ -2,4 +2,3 @@ pytest-cov
 pytest
 pycodestyle
 pytest-pylint
-coverage-badge
