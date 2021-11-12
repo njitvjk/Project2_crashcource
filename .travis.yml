@@ -11,3 +11,4 @@ branches:
   only:
     - main
     - development
+    - branch1
