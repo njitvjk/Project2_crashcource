@@ -14,4 +14,4 @@ branches:
     - calc_part2
     
 after_sucess:
-  - codecov
+  - coveralls
