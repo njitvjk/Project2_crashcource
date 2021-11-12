@@ -22,7 +22,7 @@ class TestApp(unittest.TestCase):
         result = calc.subtraction(self.num_1, self.num_2)
         self.assertEqual(result, 5)
     def test_0003_subtract_negativevalue(self):
-        """Case3 :Subtraction_negativeoutput"""
+        """Case3 :Subtraction_negative output"""
         calc = Calculator()
         result = calc.subtraction(self.num_2, self.num_1)
         self.assertEqual(result, -5)

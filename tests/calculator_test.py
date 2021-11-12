@@ -1,4 +1,4 @@
-"""Testing the arithematic operations"""
+"""Testing the Arithematic operations"""
 import pytest
 
 from calculator.calculator import Calculator
