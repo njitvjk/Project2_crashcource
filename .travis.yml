@@ -9,7 +9,6 @@ script:
 
 branches:
   only:
-    - main
-    - development
-    - branch1
     - calc_part2
+    - development
+
