@@ -11,6 +11,6 @@ branches:
   only:
     - main
     - development
-    - calc_part2
+    - branch1
 
 
