@@ -12,5 +12,8 @@ branches:
     - main
     - development
     - branch1
+    
+after_sucess:
+  - coveralls
 
 
