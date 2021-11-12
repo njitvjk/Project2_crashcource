@@ -12,5 +12,6 @@ branches:
     - main
     - development
     - calc_part2
-
-
+    
+after_sucess:
+  - codecov
