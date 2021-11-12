@@ -13,7 +13,7 @@ def test_001_add_to_history():
     assert Calculator.history_count() == 2
     assert Calculator.get_history() == 5
 
-def test_002_add():
+def test_002_add_values():
     """Case1:Add two numbers"""
     # pylint: disable=unused-argument,redefined-outer-name
     assert Calculator.add_numbers(1,2) == 3
@@ -63,15 +63,15 @@ def test_008_get_first_result(clear_history):
     assert Calculator.add_numbers(2, 2) == 4
     assert Calculator.add_numbers(3, 2) == 5
     assert Calculator.get_result_of_first_calculation() == 4
-def test_009_subtraction(clear_history):
+def test_009_subtraction_values(clear_history):
     """Case6:test subtraction"""
     # pylint: disable=unused-argument,redefined-outer-name
     assert Calculator.subtract_number(1, 2) == -1
-def test_010_multiplication(clear_history):
+def test_010_multiplication_values(clear_history):
     """ Case7 :multiplication of two numbers"""
     # pylint: disable=unused-argument,redefined-outer-name
     assert Calculator.multiply_numbers(1,2) == 2
-def test_011_division(clear_history):
+def test_011_division_values(clear_history):
     """Case9 :Division"""
     # pylint: disable=unused-argument,redefined-outer-name
     assert Calculator.divide_numbers(2, 2) == 1
