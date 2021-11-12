@@ -3,6 +3,8 @@
 [![Build Status](https://app.travis-ci.com/njitvjk/calc2.svg?branch=main)](https://app.travis-ci.com/njitvjk/calc2)
 [![Coverage Status](https://coveralls.io/repos/github/njitvjk/calc2/badge.svg?branch=calc_part2)](https://coveralls.io/github/njitvjk/calc2?branch=calc_part2)
 
+Additional build link for this branch 
+[Build for second assignment](https://app.travis-ci.com/github/njitvjk/calc2/builds/241697993)
 
 #### Operations
 1. Branch- calc_part2 <br/>
