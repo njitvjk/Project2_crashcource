@@ -1,6 +1,5 @@
 # Assignment 2-Create an Improved Calculator With History
 
-
 [![Build Status](https://app.travis-ci.com/njitvjk/calc2.svg?branch=main)](https://app.travis-ci.com/njitvjk/calc2)
 
 
@@ -10,4 +9,5 @@
 3.Parent class stores values a and b and factory while child perform operations
 4.Test cases covered for every operations with 100% coverage
 5.fixtures used in the program
+
 
