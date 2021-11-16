@@ -7,4 +7,7 @@ class Addition(Calculation):
 
     def get_output(self):
         """function returns the addition result"""
-        return self.value_a + self.value_b
+        sum_of_values = 0.0
+        for value in self.values:
+            sum_of_values = value + sum_of_values
+        return sum_of_values

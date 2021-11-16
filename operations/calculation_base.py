@@ -1,13 +1,18 @@
 """Parent Class"""
 class Calculation:
-    """Constructor and class method """
-    #Initialization
+    """ calculation abstract base class"""
     # pylint: disable=too-few-public-methods
-    def __init__(self,value_a, value_b):
-        self.value_a = value_a
-        self.value_b = value_b
-    #Factory
+    def __init__(self,values: tuple):
+        """ constructor method"""
+        self.values = Calculation.convert_args_to_tuple_of_float(values)
     @classmethod
-    def create(cls, value_a, value_b):
-        """class method returns the class """
-        return cls(value_a,value_b)
+    def create(cls,values: tuple):
+        """ factory method"""
+        return cls(values)
+    @staticmethod
+    def convert_args_to_tuple_of_float(values):
+        """ standardize values to list of floats"""
+        list_values_float = []
+        for item in values:
+            list_values_float.append(float(item))
+        return tuple(list_values_float)

@@ -11,7 +11,7 @@ branches:
   only:
     - main
     - development
-    - calc_part2
+    - calc_part3
     
 after_sucess:
   - coveralls

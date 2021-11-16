@@ -1,4 +1,5 @@
 """Child Class: Subtraction"""
+import pprint
 
 from operations.calculation_base import Calculation
 
@@ -7,4 +8,8 @@ class Subtraction(Calculation):
 
     def get_output(self):
         """function returns subtracted value"""
-        return self.value_a - self.value_b
+        difference_of_values = 0.0
+        for value in self.values:
+            difference_of_values = difference_of_values - value
+            pprint.pprint(value)
+        return difference_of_values

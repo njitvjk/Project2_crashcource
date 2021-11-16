@@ -8,8 +8,10 @@ class Division(Calculation):
     def get_output(self):
         """Function also checks for zero division error"""
         #return self.value_a / self.value_b
-        try:
-            return self.value_a / self.value_b
-        except ZeroDivisionError  as ex_div:
-            print('Invalid Denominator Input:', ex_div)
-            raise ZeroDivisionError from ex_div
+        print("====================division:==========================")
+        result = self.values[0]
+        for value in self.values:
+            result = result / value
+            print("result:", result)
+            print("value:", value)
+        return result

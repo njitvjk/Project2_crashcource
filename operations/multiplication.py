@@ -7,4 +7,7 @@ class Multiplication(Calculation):
 
     def get_output(self):
         """ function to multiply two  values a and b """
-        return self.value_a * self.value_b
+        result = 1.0
+        for value in self.values:
+            result = result * value
+        return result
