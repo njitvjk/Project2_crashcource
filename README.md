@@ -9,3 +9,8 @@ You can also click below to view the build for this branch.<br/>
 1. All static methods covered 
 2. Tuples used to pass multiple arguments
 3. Build passed and coverage badge on attached on top 
+
+## Build screenshot from travis 
+![image](https://user-images.githubusercontent.com/90334123/142344366-8a20f18d-b92c-4b7c-98d0-da3f6d4be7da.png)
+
+
