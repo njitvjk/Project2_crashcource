@@ -1,6 +1,6 @@
 # Assignment 2-Create an Improved Calculator With History
 
-[![Build Status](https://app.travis-ci.com/njitvjk/calc2.svg?branch=main)](https://app.travis-ci.com/njitvjk/calc2)
+[![Build Status](https://app.travis-ci.com/njitvjk/calc2.svg?branch=calc_part2)](https://app.travis-ci.com/njitvjk/calc2)
 [![Coverage Status](https://coveralls.io/repos/github/njitvjk/calc2/badge.svg?branch=calc_part2)](https://coveralls.io/github/njitvjk/calc2?branch=calc_part2)
 
 Additional build link for this branch.<br/><br/>
