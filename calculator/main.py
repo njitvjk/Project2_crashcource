@@ -1,6 +1,4 @@
 """Calculator program """
-
-
 class Calculator:
     """Class with arithematic operations """
     output = 0

@@ -2,13 +2,11 @@
 import csv
 import unittest
 
-import xmlrunner
 from pyunitreport import HTMLTestRunner
 
 from calculator.main import Calculator
 
 # test data file path, the file is a csv file.
-
 
 test_data_file_path = './test.csv'
 
@@ -52,34 +50,6 @@ def build_test_suite():
     test_suite.addTest(TestApp('test_0003_multiply'))
     test_suite.addTest(TestApp('test_0004_division'))
     return test_suite
-
-
-def build_text_report():
-    test_suite = build_test_suite()
-    # create unittest.TextTestRunner() object.
-    test_runner = unittest.TextTestRunner()
-    # run the test suite.
-    test_runner.run(test_suite)
-
-    # run below code to run all test function
-    # unittest.main()
-
-    # generate html report.
-
-
-def build_html_report():
-    test_suite = build_test_suite()
-    print("inside reporting")
-    test_runner = HTMLTestRunner(output='./html_report')
-    test_runner.run(test_suite)
-
-    # generate xml result.
-
-
-def build_xml_report():
-    test_suite = build_test_suite()
-    test_runner = xmlrunner.XMLTestRunner(output='./reports/xml_report')
-    test_runner.run(test_suite)
 
 
 class TestApp(unittest.TestCase):
