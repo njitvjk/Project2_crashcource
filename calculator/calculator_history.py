@@ -1,22 +1,13 @@
 from abc import abstractmethod
 
 
-class CalculatorHistory():
+class CalculatorHistory:
     calculation_history = []
 
+    def display_history(self):
+        return self.calculation_history[-1]
 
-def get_history_list(calculation_history=None):
-    return calculation_history
+    @abstractmethod
+    def add_to_history(self, result):
+        pass
 
-
-def display_history(calculation_history=None):
-    return calculation_history[-1]
-
-@abstractmethod
-def clear_calculator(self):
-    pass
-
-
-@abstractmethod
-def add_to_history():
-    pass
