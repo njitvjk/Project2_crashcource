@@ -1,8 +1,6 @@
 import math
 
-
-from calculator.calculator_history import CalculatorHistory
-
+from calculator.calculator_history1 import CalculatorHistory
 
 
 class Common_calculator(CalculatorHistory):
@@ -12,18 +10,17 @@ class Common_calculator(CalculatorHistory):
         self.add_to_history(result)
         return result
 
-    ##sOlid- principel 2
     def add_three_values(self, a, b, c):
         result = a + b + c
         self.add_to_history(result)
         return result
 
-    def substract(self, a, b):
+    def cal_subtract(self, a, b):
         result = a - b
         self.add_to_history(result)
         return result
 
-    def cal_multplicaton(self, nums):
+    def cal_multiplication(self, nums):
         result = math.prod(nums)
         self.add_to_history(result)
         return result
@@ -33,15 +30,5 @@ class Common_calculator(CalculatorHistory):
         self.add_to_history(result)
         return result
 
-    def add_to_history(self,result):
-        CalculatorHistory.calculation_history.append(result)
-
-    #principle 3 accessing parent class
-    def display_history(self):
-        return super.display_history()
-    #Principle 4
-    def clear_calculator(self):
-        CalculatorHistory.calculation_history.clear()
-
-
-
+    def add_to_history(self, result):
+        self.calculation_history.append(result)
