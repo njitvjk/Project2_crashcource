@@ -1,10 +1,11 @@
 
-### Calculator Assignment
-Please use the branches mentioned below to view the assignments <br/>
-### Assignment 1
- branch1 
-### Assignmnet 2
- calc_part2 
+### Python Crash Course -Hands On programming 
+----------------------------------------------
+Topics: <br/>
+#### Python basics
+#### OOPS
+#### Testing -AAA patern and build
+#### SOLID principles
 
 
 
