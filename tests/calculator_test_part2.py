@@ -49,7 +49,7 @@ def test_006_get_first_result(clear_history):
     assert Calculator.add_numbers(3, 2) == 5
     assert Calculator.get_result_of_first_calculation() == 4
 def test_007_subtraction(clear_history):
-    """Case6:test subtraction"""
+    """Case6: subtraction testing"""
     # pylint: disable=unused-argument,redefined-outer-name
     assert Calculator.subtract_number(1, 2) == -1
 def test_008_multiplication(clear_history):
