@@ -23,7 +23,7 @@ def _init_logger():
 _init_logger()
 _logger = logging.getLogger('LoggingCalculatorResults')
 
-df = pd.read_csv('../done/data.csv',
+df = pd.read_csv('/done/data.csv',
                  sep=',', )
 
 
