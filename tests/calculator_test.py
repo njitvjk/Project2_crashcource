@@ -2,22 +2,26 @@
 import csv
 import unittest
 import pandas as pd
+import logging
 
 from pyunitreport import HTMLTestRunner
 
 from calculator.main import Calculator
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("C:/Users/thiya/PycharmProjects/Project2_crashcource/tests/debug.log"),
+        logging.StreamHandler()
+    ]
+)
 
 # test data file path, the file is a csv file.
 df = pd.read_csv('../input/data.csv',
                  sep=',', )
 
 
-# load test data from ./test_data.csv file.
-def load_test_data():
-    print('open and load data from test_data.csv complete.')
-
-
-# close and release the test data file object.
 
 
 def build_test_suite():
@@ -35,15 +39,9 @@ def build_test_suite():
 class TestApp(unittest.TestCase):
     """Test for Calculator program"""
 
+
     # this is the Calculator class instance.
     calculator = None
-
-    # class level setup function, execute once only before any test function.
-    @classmethod
-    def setUpClass(cls):
-        load_test_data()
-        print('')
-        print('setUpClass')
 
     # execute before every test case function run.
     def setUp(self):
@@ -63,6 +61,7 @@ class TestApp(unittest.TestCase):
         """Case1:Addition"""
         print('')
         print('******test_addition******')
+        self.logger.info("addition _successful")
         # get each row text from the csv file.
 
         # the first column in the text line is x value.
