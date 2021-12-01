@@ -11,7 +11,7 @@ from calculator.calculator import Calculator
 def _init_logger():
     logger = logging.getLogger('LoggingCalculatorResults')  #1
     logger.setLevel(logging.INFO)  #2
-    handler = logging.FileHandler('C:/Users/thiya/PycharmProjects/Project2_crashcource/log/debug.log', mode="w")  #3
+    handler = logging.FileHandler('/Project2_crashcource/log/debug.log', mode="w")  #3
     handler.setLevel(logging.INFO)  #4
     formatter = logging.Formatter(
             '%(asctime)s:%(name)s:%(message)s') #5
