@@ -1,28 +1,31 @@
 """Tests file """
 import logging
+import sys
 import unittest
 import pandas as pd
 from pyunitreport import HTMLTestRunner
-from calculator.main import Calculator
-
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.FileHandler("C:/Users/thiya/PycharmProjects/Project2_crashcource/tests/debug.log", mode="w"),
-        logging.StreamHandler()
-
-    ]
-
-)
-
-
-logger = logging.getLogger()
+from calculator.calculator import Calculator
 
 # test data file path, the file is a csv file.
-df = pd.read_csv('../input/data.csv',
+
+def _init_logger():
+    logger = logging.getLogger('LoggingCalculatorResults')  #1
+    logger.setLevel(logging.INFO)  #2
+    handler = logging.FileHandler('../tests/debug.log',mode="w")  #3
+    handler.setLevel(logging.INFO)  #4
+    formatter = logging.Formatter(
+            '%(asctime)s:%(name)s:%(message)s') #5
+    handler.setFormatter(formatter)  #6
+    logger.propagate = "False"
+    logger.addHandler(handler)  #7
+
+
+_init_logger()
+_logger = logging.getLogger('LoggingCalculatorResults')
+
+df = pd.read_csv('../done/data.csv',
                  sep=',', )
+
 
 def build_test_suite():
     # create unittest.TestSuite object.
@@ -41,13 +44,9 @@ class TestApp(unittest.TestCase):
     # this is the Calculator class instance.
     calculator = None
 
-
-
-
     # execute before every test case function run.
     def setUp(self):
         self.calculator = Calculator()
-
         print('')
         print('setUp')
 
@@ -63,7 +62,7 @@ class TestApp(unittest.TestCase):
         """Case1:Addition"""
         print('')
         print('******test_addition******')
-        logger.info("addition _successful")
+
         # get each row text from the csv file.
 
         # the first column in the text line is x value.
@@ -78,6 +77,7 @@ class TestApp(unittest.TestCase):
         result = calc.addition(x, y)
         # result = self.calculator.plus(x, y)
         print(operation, ':', str(x) + ' + ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
+        _logger.info("Operation %s ,Input file %s ,Row %s,Sum of % s and %s is % s" %( operation,'data.csv',df[df['OPERATION'] == 'ADDITION'].index[0],x, y, expect_result))
         # Assert
         self.assertEqual(float(result), float(expect_result))
 
@@ -95,6 +95,8 @@ class TestApp(unittest.TestCase):
         result = calc.subtraction(x, y)
 
         print(operation, ':', str(x) + ' - ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
+        _logger.info("Operation %s ,Input file %s ,Row %s,Difference of % s and %s is % s" % (
+        operation, 'data.csv', df[df['OPERATION'] == 'SUBTRACTION'].index[0], x, y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
     def test_0003_multiply(self):
@@ -111,6 +113,8 @@ class TestApp(unittest.TestCase):
         # result = self.calculator.multiple(x, y)
 
         print(operation, ':', str(x) + ' * ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
+        _logger.info("Operation %s ,Input file %s ,Row %s,Product of % s and %s is % s" % (
+        operation, 'data.csv', df[df['OPERATION'] == 'MULTIPLICATION'].index[0], x, y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
     def test_0004_division(self):
@@ -125,6 +129,8 @@ class TestApp(unittest.TestCase):
         calc = Calculator()
         result = calc.division(x, y)
         print(operation, ':', str(x) + ' % ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
+        _logger.info("Operation %s ,Input file %s ,Row %s,Division of % s by %s is % s" % (
+        operation, 'data.csv', df[df['OPERATION'] == 'DIVISION'].index[0], x, y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
     def test_0005_division_zero(self):
@@ -139,6 +145,8 @@ class TestApp(unittest.TestCase):
         calc = Calculator()
         result = calc.division(x, y)
         print(operation, ':', str(x) + ' % ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
+        _logger.info("Operation %s ,Input file %s ,Row %s,Division of % s by %s is % s" % (
+        operation, 'data.csv', df[df['OPERATION'] == 'DIVISIONBYZERO'].index[0], x, y, 'INVALID-ATTEMPT TO DIVIDE BY ZERO'))
         self.assertRaises(Exception, result)
 
 

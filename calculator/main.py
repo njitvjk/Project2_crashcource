@@ -1,38 +1,32 @@
-"""Calculator program """
-class Calculator:
-    """Class with arithematic operations """
-    output = 0
-    
-
-    def addition(self, num_1, num_2):
-        """Perform addition operation on num_1 and num_2"""
-        self.output = float(num_1) + float(num_2)
-        print('The result of addition is ', str(self.output))
-
-        return self.output
-
-    def subtraction(self, num_1, num_2):
-        """Perform subtraction operation on num_! and num_2 """
-        self.output = float(num_1) - float(num_2)
-        print('The result of subtraction is ', str(self.output))
-
-        return self.output
-
-    def division(self, num_1, num_2):
-        """Perform division operation on num_1 and num_2"""
-        # if b == 0:
-        try:
-            self.output = float(num_1) / float(num_2)
-            print('The result of division is ', str(self.output))
-
-            return self.output
-        except ZeroDivisionError as ex_div:
-            print('The result of division is ', 'invalid input')
+import sys
+import time
+import logging
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+import os
 
 
-    def multiplication(self, num_1, num_2):
-        """Perform multiplication operation on a and b """
-        self.output = float(num_1) * float(num_2)
-        print('The result of multiplication is ', str(self.output))
+class Handler(FileSystemEventHandler):
+    def on_modified(self, event):
+        for filename in os.listdir(folder_to_track):
+            src = folder_to_track + '/' + filename
+            new_dest = folder_destination + '/' + filename
+            os.rename(src, new_dest)
 
-        return self.output
+
+folder_to_track = 'C:/Users/thiya/PycharmProjects/Project2_crashcource/input'
+folder_destination = 'C:/Users/thiya/PycharmProjects/Project2_crashcource/done'
+observer = Observer()
+event_handler = Handler()
+observer.schedule(event_handler, folder_to_track)
+print("watchDog starts")
+observer.start()
+print("watchdog After the start")
+try:
+    while True:
+        time.sleep(1)
+        print("timer")
+except KeyboardInterrupt:
+    observer.stop()
+
+observer.join()
