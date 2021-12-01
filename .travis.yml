@@ -9,10 +9,8 @@ script:
 
 branches:
   only:
-    - main
-    - development
-    - branch1
-    
+    - Pandas
+
 after_sucess:
   - coveralls
 

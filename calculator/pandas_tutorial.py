@@ -15,12 +15,9 @@ df = pd.read_csv('../input/data.csv',
 # Print the Dataframe
 
 
-def absolutepath(filepath):
-    relative = Path(filepath)
-    return relative.absolute()
 
 
 print(df.loc[0][1])
 print(df)
-print(absolutepath('../input/data.csv'))
+
 
