@@ -1,0 +1,5 @@
+2021-12-01 18:59:31,317:LoggingCalculatorResults:Operation ADDITION ,Input file data.csv ,record 0,Sum of 3 and 4 is 7
+2021-12-01 18:59:31,317:LoggingCalculatorResults:Operation SUBTRACTION ,Input file data.csv ,Record 1,Difference of 6 and 5 is 1
+2021-12-01 18:59:31,317:LoggingCalculatorResults:Operation MULTIPLICATION ,Input file data.csv ,Record 2,Product of 2 and 3 is 6
+2021-12-01 18:59:31,334:LoggingCalculatorResults:Operation DIVISION ,Input file data.csv ,Record 3,Division of 5 by 1 is 5
+2021-12-01 18:59:31,334:LoggingCalculatorResults:Operation DIVISIONBYZERO ,Input file data.csv ,Record 4,Division of 2 by 0 is INVALID-ATTEMPT TO DIVIDE BY ZERO
