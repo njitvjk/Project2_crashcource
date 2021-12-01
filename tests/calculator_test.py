@@ -16,7 +16,7 @@ def _init_logger():
     formatter = logging.Formatter(
             '%(asctime)s:%(name)s:%(message)s') #5
     handler.setFormatter(formatter)  #6
-    logger.propagate = "False"
+    logger.propagate = 0
     logger.addHandler(handler)  #7
 
 
@@ -77,7 +77,7 @@ class TestApp(unittest.TestCase):
         result = calc.addition(x, y)
         # result = self.calculator.plus(x, y)
         print(operation, ':', str(x) + ' + ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
-        _logger.info("Operation %s ,Input file %s ,Row %s,Sum of % s and %s is % s" %( operation,'data.csv',df[df['OPERATION'] == 'ADDITION'].index[0],x, y, expect_result))
+        _logger.info("Operation %s ,Input file %s ,record %s,Sum of % s and %s is % s" %( operation,'data.csv',df[df['OPERATION'] == 'ADDITION'].index[0],x, y, expect_result))
         # Assert
         self.assertEqual(float(result), float(expect_result))
 
@@ -95,7 +95,7 @@ class TestApp(unittest.TestCase):
         result = calc.subtraction(x, y)
 
         print(operation, ':', str(x) + ' - ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
-        _logger.info("Operation %s ,Input file %s ,Row %s,Difference of % s and %s is % s" % (
+        _logger.info("Operation %s ,Input file %s ,Record %s,Difference of % s and %s is % s" % (
         operation, 'data.csv', df[df['OPERATION'] == 'SUBTRACTION'].index[0], x, y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
@@ -113,7 +113,7 @@ class TestApp(unittest.TestCase):
         # result = self.calculator.multiple(x, y)
 
         print(operation, ':', str(x) + ' * ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
-        _logger.info("Operation %s ,Input file %s ,Row %s,Product of % s and %s is % s" % (
+        _logger.info("Operation %s ,Input file %s ,Record %s,Product of % s and %s is % s" % (
         operation, 'data.csv', df[df['OPERATION'] == 'MULTIPLICATION'].index[0], x, y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
@@ -129,7 +129,7 @@ class TestApp(unittest.TestCase):
         calc = Calculator()
         result = calc.division(x, y)
         print(operation, ':', str(x) + ' % ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
-        _logger.info("Operation %s ,Input file %s ,Row %s,Division of % s by %s is % s" % (
+        _logger.info("Operation %s ,Input file %s ,Record %s,Division of % s by %s is % s" % (
         operation, 'data.csv', df[df['OPERATION'] == 'DIVISION'].index[0], x, y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
@@ -145,7 +145,7 @@ class TestApp(unittest.TestCase):
         calc = Calculator()
         result = calc.division(x, y)
         print(operation, ':', str(x) + ' % ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
-        _logger.info("Operation %s ,Input file %s ,Row %s,Division of % s by %s is % s" % (
+        _logger.info("Operation %s ,Input file %s ,Record %s,Division of % s by %s is % s" % (
         operation, 'data.csv', df[df['OPERATION'] == 'DIVISIONBYZERO'].index[0], x, y, 'INVALID-ATTEMPT TO DIVIDE BY ZERO'))
         self.assertRaises(Exception, result)
 
