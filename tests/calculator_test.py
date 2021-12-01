@@ -11,7 +11,7 @@ from calculator.calculator import Calculator
 def _init_logger():
     logger = logging.getLogger('LoggingCalculatorResults')  #1
     logger.setLevel(logging.INFO)  #2
-    handler = logging.FileHandler('/Project2_crashcource/log/debug.log', mode="w")  #3
+    handler = logging.FileHandler('debug.log', mode="w")  #3
     handler.setLevel(logging.INFO)  #4
     formatter = logging.Formatter(
             '%(asctime)s:%(name)s:%(message)s') #5
@@ -25,19 +25,6 @@ _logger = logging.getLogger('LoggingCalculatorResults')
 
 df = pd.read_csv('/done/data.csv',
                  sep=',', )
-
-
-def build_test_suite():
-    # create unittest.TestSuite object.
-    test_suite = unittest.TestSuite()
-    print("inside build test suite")
-    # add each test function to the test suite object.
-    test_suite.addTest(TestApp('test_0001_add'))
-    test_suite.addTest(TestApp('test_0002_subtract'))
-    test_suite.addTest(TestApp('test_0003_multiply'))
-    test_suite.addTest(TestApp('test_0004_division'))
-    return test_suite
-
 
 class TestApp(unittest.TestCase):
     """Test for Calculator program"""
@@ -150,10 +137,4 @@ class TestApp(unittest.TestCase):
         self.assertRaises(Exception, result)
 
 
-kwargs = {
-    "output": 'reports',
-    "report_name": 'report_name',
-    "failfast": True
 
-}
-report_result = HTMLTestRunner(**kwargs).run(build_test_suite())
