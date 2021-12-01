@@ -26,7 +26,7 @@ _logger = logging.getLogger('LoggingCalculatorResults')
 df = pd.read_csv('/done/data.csv',
                  sep=',', )
 
-class TestApp(unittest.TestCase):
+class TestApp():
     """Test for Calculator program"""
     # this is the Calculator class instance.
     calculator = None
