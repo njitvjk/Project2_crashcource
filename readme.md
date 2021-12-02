@@ -24,7 +24,8 @@ Divison with exception for Division by zero
 3.tests/calculator_test.py- Pandas dataframe<br/>
 
 #### Build Screen shot <br/>
-![image](https://user-images.githubusercontent.com/90334123/144356884-8cdd3f32-e3c3-40fe-84b7-ad74ce20b201.png)
+![image](https://user-images.githubusercontent.com/90334123/144361678-70e29b95-a71b-459b-91d7-dcc8af543e94.png)
+
 
 
 
