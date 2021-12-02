@@ -26,7 +26,13 @@ class TestApp(unittest.TestCase):
     # this is the Calculator class instance.
 
     calculator = None
-    df = pd.read_csv('../done/data.csv', sep=',', )
+    df = pd.read_csv('../done/data.csv', sep=',', dtype={
+        'OPERATION': str,
+        'VALUE_A': float,
+        'VALUE_B': float,
+        'EXPECTED_OUTPUT': str
+    })
+    print(df)
     logger = setup_log('debug_calculator')
 
     def setUp(self):
@@ -52,12 +58,12 @@ class TestApp(unittest.TestCase):
 
         # the first column in the text line is x value.
 
-        operation = self.df.OPERATION[0]
+        operation = self.df["OPERATION"].iloc[0]
         # the second column in the text line is y value.
-        value_x = self.df.VALUE_A[0]
-        value_y = self.df.VALUE_B[0]
+        value_x = self.df["VALUE_A"].iloc[0]
+        value_y = self.df["VALUE_B"].iloc[0]
         # the third column in the text line is (x + y) value.
-        expect_result = self.df.EXPECTED_OUTPUT[0]
+        expect_result = self.df["EXPECTED_OUTPUT"].iloc[0]
         # Act
         calc = Calculator()
         result = calc.addition(value_x, value_y)
@@ -80,11 +86,11 @@ class TestApp(unittest.TestCase):
         """Case2 :Subtraction"""
         print('')
         print('******test_subtract******')
-        operation = self.df.loc[1][0]
-        value_x = self.df.loc[1][1]
-        value_y = self.df.loc[1][2]
+        operation = self.df["OPERATION"].iloc[1]
+        value_x = self.df["VALUE_A"].iloc[1]
+        value_y = self.df["VALUE_B"].iloc[1]
         # the third column in the text line is (value_x - y) value.
-        expect_result = self.df.loc[1][3]
+        expect_result = self.df["EXPECTED_OUTPUT"].iloc[1]
         # result = self.calculator.minus(x, y)
         calc = Calculator()
         result = calc.subtraction(value_x, value_y)
@@ -105,11 +111,11 @@ class TestApp(unittest.TestCase):
         """Case4 :Multiplication"""
         print('')
         print('******test_multiple******')
-        operation = self.df.loc[2][0]
-        value_x = self.df.loc[2][1]
-        value_y = self.df.loc[2][2]
+        operation = self.df["OPERATION"].iloc[2]
+        value_x = self.df["VALUE_A"].iloc[2]
+        value_y = self.df["VALUE_B"].iloc[2]
         # the third column in the text line is (value_x * value_y) value.
-        expect_result = self.df.loc[2][3]
+        expect_result = self.df["EXPECTED_OUTPUT"].iloc[2]
         calc = Calculator()
         result = calc.multiplication(value_x, value_y)
         # result = self.calculator.multiple(x, y)
@@ -135,11 +141,11 @@ class TestApp(unittest.TestCase):
         """Case5 :Division"""
         print('')
         print('******test_divide******')
-        operation = self.df.loc[3][0]
-        value_x = self.df.loc[3][1]
-        value_y = self.df.loc[3][2]
+        operation = self.df["OPERATION"].iloc[3]
+        value_x = self.df["VALUE_A"].iloc[3]
+        value_y = self.df["VALUE_B"].iloc[3]
         # the sixth column in the text line is (value_x / value_y) value.
-        expect_result = self.df.loc[3][3]
+        expect_result = self.df["EXPECTED_OUTPUT"].iloc[3]
         calc = Calculator()
         result = calc.division(value_x, value_y)
         print(operation, ':',
@@ -162,11 +168,11 @@ class TestApp(unittest.TestCase):
         """Case5 :Division"""
         print('')
         print('******test_divide******')
-        operation = self.df.loc[4][0]
-        value_x = self.df.loc[4][1]
-        value_y = self.df.loc[4][2]
+        operation = self.df["OPERATION"].iloc[4]
+        value_x = self.df["VALUE_A"].iloc[4]
+        value_y = self.df["VALUE_B"].iloc[4]
         # the sixth column in the text line is (value_x / value_y) value.
-        expect_result = self.df.loc[4][3]
+        expect_result = self.df["EXPECTED_OUTPUT"].iloc[4]
         calc = Calculator()
         result = calc.division(value_x, value_y)
         print(operation, ':',
@@ -180,4 +186,5 @@ class TestApp(unittest.TestCase):
                          value_x,
                          value_y,
                          'INVALID-ATTEMPT TO DIVIDE BY ZERO')
-        self.assertRaises(Exception, result)
+        self.assertEqual(result, expect_result)
+        # self.assertRaises(Exception, result)

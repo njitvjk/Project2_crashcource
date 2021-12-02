@@ -24,7 +24,14 @@ Divison with exception for Division by zero
 3.tests/calculator_test.py- Pandas dataframe<br/>
 
 #### Build Screen shot <br/>
+COVERAGE 100%<BR/>
 ![image](https://user-images.githubusercontent.com/90334123/144361678-70e29b95-a71b-459b-91d7-dcc8af543e94.png)
+
+#### PYLINT screenshots
+TEST PASSED <br/>
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
 
 
 
