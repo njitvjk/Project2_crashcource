@@ -31,8 +31,8 @@ Divison with exception for Division by zero
 2.calculator/calculator.py-Contains all arithematic operations<br/>
 3.tests/calculator_test.py- Pandas dataframe<br/>
 
-#### Build Screen shot from travis<br/>
-![image](https://user-images.githubusercontent.com/90334123/142343365-55c5cf5e-5851-4443-9f97-e7c5f3e04144.png)
+#### Build Screen shot <br/>
+![img_3.png](img_3.png)
 
 #### Screenshots
 Watchdog

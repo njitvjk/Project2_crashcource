@@ -10,16 +10,15 @@ class TestApp(unittest.TestCase):
     # this is the Calculator class instance.
 
     calculator = None
-    df = pd.read_csv('done\data.csv',
+    df = pd.read_csv('done/data.csv',
                      sep=',', )
 
-    def __int__(self):
+    def log_calc(self):
         logger = logging.getLogger('LoggingCalculatorResults')  # 1
         logger.setLevel(logging.INFO)  # 2
-        handler = logging.FileHandler('log\debug.log', mode="w")  # 3
+        handler = logging.FileHandler('log/debug.log', mode="w")  # 3
         handler.setLevel(logging.INFO)  # 4
-        formatter = logging.Formatter(
-            '%(asctime)s:%(name)s:%(message)s')  # 5
+        formatter = logging.Formatter('%(asctime)s:%(name)s:%(message)s')  # 5
         handler.setFormatter(formatter)  # 6
         logger.propagate = 0
         logger.addHandler(handler)  # 7
@@ -27,7 +26,7 @@ class TestApp(unittest.TestCase):
     # execute before every test case function run.
     def setUp(self):
         self.calculator = Calculator()
-
+        self.log_calc()
         print('')
         print('setUp')
         self.logger = logging.getLogger('LoggingCalculatorResults')
@@ -35,8 +34,7 @@ class TestApp(unittest.TestCase):
     # execute after every test case function run.
     def tearDown(self):
         # release the Calculator object.
-        if self.calculator is not None:
-            self.calculator = None
+        self.calculator = None
         print('')
         print('tearDown')
 
