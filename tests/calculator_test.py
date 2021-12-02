@@ -8,7 +8,7 @@ from calculator.calculator import Calculator
 
 # test data file path, the file is a csv file.
 
-def _init_logger():
+def logger():
     logger = logging.getLogger('LoggingCalculatorResults')  #1
     logger.setLevel(logging.INFO)  #2
     handler = logging.FileHandler('debug.log', mode="w")  #3
@@ -20,9 +20,6 @@ def _init_logger():
     logger.addHandler(handler)  #7
 
 
-_init_logger()
-_logger = logging.getLogger('LoggingCalculatorResults')
-
 df = pd.read_csv('../done/data.csv',
                  sep=',', )
 
@@ -30,12 +27,16 @@ class TestApp(unittest.TestCase):
     """Test for Calculator program"""
     # this is the Calculator class instance.
     calculator = None
+    def __int__(self):
+        logger()
+
 
     # execute before every test case function run.
     def setUp(self):
         self.calculator = Calculator()
         print('')
         print('setUp')
+        self.logger = logging.getLogger('LoggingCalculatorResults')
 
     # execute after every test case function run.
     def tearDown(self):
@@ -64,7 +65,7 @@ class TestApp(unittest.TestCase):
         result = calc.addition(x, y)
         # result = self.calculator.plus(x, y)
         print(operation, ':', str(x) + ' + ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
-        _logger.info("Operation %s ,Input file %s ,record %s,Sum of % s and %s is % s" %( operation,'data.csv',df[df['OPERATION'] == 'ADDITION'].index[0],x, y, expect_result))
+        self.logger.info("Operation %s ,Input file %s ,record %s,Sum of % s and %s is % s" %( operation,'data.csv',df[df['OPERATION'] == 'ADDITION'].index[0],x, y, expect_result))
         # Assert
         self.assertEqual(float(result), float(expect_result))
 
@@ -82,7 +83,7 @@ class TestApp(unittest.TestCase):
         result = calc.subtraction(x, y)
 
         print(operation, ':', str(x) + ' - ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
-        _logger.info("Operation %s ,Input file %s ,Record %s,Difference of % s and %s is % s" % (
+        self.logger.info("Operation %s ,Input file %s ,Record %s,Difference of % s and %s is % s" % (
         operation, 'data.csv', df[df['OPERATION'] == 'SUBTRACTION'].index[0], x, y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
@@ -100,7 +101,7 @@ class TestApp(unittest.TestCase):
         # result = self.calculator.multiple(x, y)
 
         print(operation, ':', str(x) + ' * ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
-        _logger.info("Operation %s ,Input file %s ,Record %s,Product of % s and %s is % s" % (
+        self.logger.info("Operation %s ,Input file %s ,Record %s,Product of % s and %s is % s" % (
         operation, 'data.csv', df[df['OPERATION'] == 'MULTIPLICATION'].index[0], x, y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
@@ -116,7 +117,7 @@ class TestApp(unittest.TestCase):
         calc = Calculator()
         result = calc.division(x, y)
         print(operation, ':', str(x) + ' % ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
-        _logger.info("Operation %s ,Input file %s ,Record %s,Division of % s by %s is % s" % (
+        self.logger.info("Operation %s ,Input file %s ,Record %s,Division of % s by %s is % s" % (
         operation, 'data.csv', df[df['OPERATION'] == 'DIVISION'].index[0], x, y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
@@ -132,7 +133,7 @@ class TestApp(unittest.TestCase):
         calc = Calculator()
         result = calc.division(x, y)
         print(operation, ':', str(x) + ' % ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
-        _logger.info("Operation %s ,Input file %s ,Record %s,Division of % s by %s is % s" % (
+        self.logger.info("Operation %s ,Input file %s ,Record %s,Division of % s by %s is % s" % (
         operation, 'data.csv', df[df['OPERATION'] == 'DIVISIONBYZERO'].index[0], x, y, 'INVALID-ATTEMPT TO DIVIDE BY ZERO'))
         self.assertRaises(Exception, result)
 
