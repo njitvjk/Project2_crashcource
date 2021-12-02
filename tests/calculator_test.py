@@ -10,10 +10,8 @@ class TestApp(unittest.TestCase):
     # this is the Calculator class instance.
 
     calculator = None
-    df: dict[Any, Any]
    
-    df = pd.read_csv('done/data.csv',
-                     sep=',', )
+    df = pd.read_csv('done/data.csv',sep=',', )  # pylint: disable=E1136  # pylint/issues/3139
 
     # pylint: disable=Method could be a function (no-self-use)
     #did not want to keep this function as method outside class hence disabling pylint error.I want to use as class method"
@@ -51,7 +49,7 @@ class TestApp(unittest.TestCase):
         # get each row text from the csv file.
 
         # the first column in the text line is x value.
-        operation = self.df.loc[0][0]
+        operation = self.df.loc[0][0] 
         # the second column in the text line is y value.
         value_x = self.df.loc[0][1]
         value_y = self.df.loc[0][2]
