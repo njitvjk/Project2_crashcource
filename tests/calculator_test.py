@@ -10,9 +10,11 @@ class TestApp(unittest.TestCase):
     # this is the Calculator class instance.
 
     calculator = None
+    # pylint: disable=Value 'self.df' is unsubscriptable (unsubscriptable-object)
     df = pd.read_csv('done/data.csv',
                      sep=',', )
 
+    # pylint: disable=Method could be a function (no-self-use)
     def log_calc(self):
         logger = logging.getLogger('LoggingCalculatorResults')  # 1
         logger.setLevel(logging.INFO)  # 2
@@ -58,8 +60,8 @@ class TestApp(unittest.TestCase):
         # result = self.calculator.plus(x, y)
         print(operation, ':', str(value_x) + ' + ' + str(value_y) + ' = '
               + str(result) + ', expect ' + str(expect_result))
-        self.logger.info("Operation %s ,Input file %s ,record %s,Sum of % s and %s is % s" % ( \
-            operation, 'data.csv', self.df[self.df['OPERATION'] == 'ADDITION'].index[0], value_x, value_y, \
+        self.logger.info("Operation %s ,Input file %s ,record %s,Sum of % s and %s is % s" % (
+            operation, 'data.csv', self.df[self.df['OPERATION'] == 'ADDITION'].index[0], value_x, value_y,
             expect_result))
         # Assert
         self.assertEqual(float(result), float(expect_result))
@@ -77,8 +79,8 @@ class TestApp(unittest.TestCase):
         calc = Calculator()
         result = calc.subtraction(value_x, value_y)
 
-        print(operation, ':',
-              str(value_x) + ' - ' + str(value_y) + ' = ' + str(result) + ', expect ' + str(expect_result))
+        print(operation, ':',str(value_x) + ' - ' + str(value_y) + ' = ' + \
+              str(result) + ', expect ' + str(expect_result))
         self.logger.info("Operation %s ,Input file %s ,Record %s,Difference of % s and %s is % s" % (
             operation, 'data.csv', self.df[self.df['OPERATION'] == 'SUBTRACTION'].index[0], value_x, value_y,
             expect_result))
