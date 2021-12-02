@@ -4,9 +4,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/njitvjk/calc2/badge.svg?branch=branch1)](https://coveralls.io/github/njitvjk/calc2?branch=branch1)
 <br/>
 
-Also you can click below to view the build for this assignment<br/><br/>
-
-[build for assignmnet 1](https://app.travis-ci.com/github/njitvjk/calc2/builds/241320285)
 
 #### Operations
 Addition<br/>
