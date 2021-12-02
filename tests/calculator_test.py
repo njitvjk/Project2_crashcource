@@ -16,6 +16,7 @@ class TestApp(unittest.TestCase):
 
     # pylint: disable=Method could be a function (no-self-use)
     def log_calc(self):
+        """logger functionality setup"""
         logger = logging.getLogger('LoggingCalculatorResults')  # 1
         logger.setLevel(logging.INFO)  # 2
         handler = logging.FileHandler('log/debug.log', mode="w")  # 3
