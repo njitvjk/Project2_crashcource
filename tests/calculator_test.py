@@ -12,7 +12,7 @@ class TestApp(unittest.TestCase):
 
     calculator = None
     df = pd.read_csv('done/data.csv',sep=',', )  
-    #did not want to keep this function as method outside class hence disabling pylint error.I want to use as class method"
+    #did not want to keep this function as method outside class hence disabling pylint error."
     def __int__(self):
         """logger functionality setup"""
         logger = logging.getLogger('LoggingCalculatorResults')  # 1
@@ -27,7 +27,6 @@ class TestApp(unittest.TestCase):
     # execute before every test case function run.
     def setUp(self):
         self.calculator = Calculator()
-       
         print('')
         print('setUp')
         self.logger = logging.getLogger('LoggingCalculatorResults')
