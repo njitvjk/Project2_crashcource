@@ -48,17 +48,18 @@ class TestApp(unittest.TestCase):
         # the first column in the text line is x value.
         operation = self.df.loc[0][0]
         # the second column in the text line is y value.
-        x = self.df.loc[0][1]
-        y = self.df.loc[0][2]
+        value_x = self.df.loc[0][1]
+        value_y = self.df.loc[0][2]
         # the third column in the text line is (x + y) value.
         expect_result = self.df.loc[0][3]
         # Act
         calc = Calculator()
-        result = calc.addition(x, y)
+        result = calc.addition(value_x, value_y)
         # result = self.calculator.plus(x, y)
-        print(operation, ':', str(x) + ' + ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
+        print(operation, ':', str(value_x) + ' + ' + str(value_y) + ' = '
+              + str(result) + ', expect ' + str(expect_result))
         self.logger.info("Operation %s ,Input file %s ,record %s,Sum of % s and %s is % s" % (
-            operation, 'data.csv', self.df[self.df['OPERATION'] == 'ADDITION'].index[0], x, y, expect_result))
+            operation, 'data.csv', self.df[self.df['OPERATION'] == 'ADDITION'].index[0], value_x, value_y, expect_result))
         # Assert
         self.assertEqual(float(result), float(expect_result))
 
@@ -67,17 +68,17 @@ class TestApp(unittest.TestCase):
         print('')
         print('******test_subtract******')
         operation = self.df.loc[1][0]
-        x = self.df.loc[1][1]
-        y = self.df.loc[1][2]
-        # the third column in the text line is (x - y) value.
+        value_x = self.df.loc[1][1]
+        value_y = self.df.loc[1][2]
+        # the third column in the text line is (value_x - value_y) value.
         expect_result = self.df.loc[1][3]
         # result = self.calculator.minus(x, y)
         calc = Calculator()
-        result = calc.subtraction(x, y)
+        result = calc.subtraction(value_x, value_y)
 
-        print(operation, ':', str(x) + ' - ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
+        print(operation, ':', str(value_x) + ' - ' + str(value_y) + ' = ' + str(result) + ', expect ' + str(expect_result))
         self.logger.info("Operation %s ,Input file %s ,Record %s,Difference of % s and %s is % s" % (
-            operation, 'data.csv', self.df[self.df['OPERATION'] == 'SUBTRACTION'].index[0], x, y, expect_result))
+            operation, 'data.csv', self.df[self.df['OPERATION'] == 'SUBTRACTION'].index[0], value_x, value_y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
     def test_0003_multiply(self):
@@ -85,17 +86,17 @@ class TestApp(unittest.TestCase):
         print('')
         print('******test_multiple******')
         operation = self.df.loc[2][0]
-        x = self.df.loc[2][1]
-        y = self.df.loc[2][2]
-        # the third column in the text line is (x * y) value.
+        value_x = self.df.loc[2][1]
+        value_y = self.df.loc[2][2]
+        # the third column in the text line is (value_x * value_y) value.
         expect_result = self.df.loc[2][3]
         calc = Calculator()
-        result = calc.multiplication(x, y)
+        result = calc.multiplication(value_x, value_y)
         # result = self.calculator.multiple(x, y)
 
-        print(operation, ':', str(x) + ' * ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
+        print(operation, ':', str(value_x) + ' * ' + str(value_y) + ' = ' + str(result) + ', expect ' + str(expect_result))
         self.logger.info("Operation %s ,Input file %s ,Record %s,Product of % s and %s is % s" % (
-            operation, 'data.csv', self.df[self.df['OPERATION'] == 'MULTIPLICATION'].index[0], x, y, expect_result))
+            operation, 'data.csv', self.df[self.df['OPERATION'] == 'MULTIPLICATION'].index[0], value_x, value_y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
     def test_0004_division(self):
@@ -103,15 +104,15 @@ class TestApp(unittest.TestCase):
         print('')
         print('******test_divide******')
         operation = self.df.loc[3][0]
-        x = self.df.loc[3][1]
-        y = self.df.loc[3][2]
-        # the sixth column in the text line is (x / y) value.
+        value_x = self.df.loc[3][1]
+        value_y = self.df.loc[3][2]
+        # the sixth column in the text line is (value_x / value_y) value.
         expect_result = self.df.loc[3][3]
         calc = Calculator()
-        result = calc.division(x, y)
-        print(operation, ':', str(x) + ' % ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
+        result = calc.division(value_x, value_y)
+        print(operation, ':', str(value_x) + ' % ' + str(value_y) + ' = ' + str(result) + ', expect ' + str(expect_result))
         self.logger.info("Operation %s ,Input file %s ,Record %s,Division of % s by %s is % s" % (
-            operation, 'data.csv', self.df[self.df['OPERATION'] == 'DIVISION'].index[0], x, y, expect_result))
+            operation, 'data.csv', self.df[self.df['OPERATION'] == 'DIVISION'].index[0], value_x, value_y, expect_result))
         self.assertEqual(float(result), float(expect_result))
 
     def test_0005_division_zero(self):
@@ -119,15 +120,15 @@ class TestApp(unittest.TestCase):
         print('')
         print('******test_divide******')
         operation = self.df.loc[4][0]
-        x = self.df.loc[4][1]
-        y = self.df.loc[4][2]
-        # the sixth column in the text line is (x / y) value.
+        value_x = self.df.loc[4][1]
+        value_y = self.df.loc[4][2]
+        # the sixth column in the text line is (value_x / value_y) value.
         expect_result = self.df.loc[4][3]
         calc = Calculator()
-        result = calc.division(x, y)
-        print(operation, ':', str(x) + ' % ' + str(y) + ' = ' + str(result) + ', expect ' + str(expect_result))
+        result = calc.division(value_x, value_y)
+        print(operation, ':', str(value_x) + ' % ' + str(value_y) + ' = ' + str(result) + ', expect ' + str(expect_result))
         self.logger.info("Operation %s ,Input file %s ,Record %s,Division of % s by %s is % s" % (
-            operation, 'data.csv', self.df[self.df['OPERATION'] == 'DIVISIONBYZERO'].index[0], x, y,
+            operation, 'data.csv', self.df[self.df['OPERATION'] == 'DIVISIONBYZERO'].index[0], value_x, value_y,
             'INVALID-ATTEMPT TO DIVIDE BY ZERO'))
         self.assertRaises(Exception, result)
 
