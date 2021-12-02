@@ -2,8 +2,6 @@
 class Calculator:
     """Class with arithematic operations """
     output = 0
-    
-
     def addition(self, num_1, num_2):
         """Perform addition operation on num_1 and num_2"""
         self.output = float(num_1) + float(num_2)
@@ -24,10 +22,10 @@ class Calculator:
         try:
             self.output = float(num_1) / float(num_2)
             print('The result of division is ', str(self.output))
-
             return self.output
         except ZeroDivisionError as ex_div:
             print('The result of division is ', 'invalid input')
+            return ex_div
 
 
     def multiplication(self, num_1, num_2):

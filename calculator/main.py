@@ -1,18 +1,14 @@
-import sys
 import time
-import logging
+import os
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-import os
-
-
 class Handler(FileSystemEventHandler):
-    def on_modified(self, event):
+    """Class implements watch dog to watch a folder and move the input file to another folder"""
+    def on_modified(self,event):
         for filename in os.listdir(folder_to_track):
             src = folder_to_track + '/' + filename
             new_dest = folder_destination + '/' + filename
             os.rename(src, new_dest)
-
 
 folder_to_track = 'input'
 folder_destination = 'done'
