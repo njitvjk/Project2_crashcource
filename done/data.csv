@@ -3,5 +3,5 @@ ADDITION,3,4,7
 SUBTRACTION,6,5,1
 MULTIPLICATION,2,3,6
 DIVISION,5,1,5
-DIVISIONBYZERO,2,0,ZeroDivisionError('float division by zero')
+DIVISIONBYZERO,2,0,float division by zero
 
