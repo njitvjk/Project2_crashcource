@@ -1,24 +1,20 @@
 """Tests file """
 import logging
 import unittest
-from typing import Dict, Any
-
 import pandas as pd
 from calculator.calculator import Calculator
 
 
 class TestApp(unittest.TestCase):
     """Test for Calculator program"""
-    # pylint: disable=Method could be a function (no-self-use)
     # this is the Calculator class instance.
+     # pylint: disable=Method could be a function (no-self-use)
 
     calculator = None
-
-    df = pd.read_csv('done/data.csv',
-                     sep=',', )
-
-
-    def log_calc(self):
+    df = pd.read_csv('done/data.csv',sep=',', )  
+    #did not want to keep this function as method outside class hence disabling pylint error.I want to use as class method"
+    def __int__(self):
+        """logger functionality setup"""
         logger = logging.getLogger('LoggingCalculatorResults')  # 1
         logger.setLevel(logging.INFO)  # 2
         handler = logging.FileHandler('log/debug.log', mode="w")  # 3
@@ -31,7 +27,7 @@ class TestApp(unittest.TestCase):
     # execute before every test case function run.
     def setUp(self):
         self.calculator = Calculator()
-        self.log_calc()
+       
         print('')
         print('setUp')
         self.logger = logging.getLogger('LoggingCalculatorResults')
@@ -51,7 +47,7 @@ class TestApp(unittest.TestCase):
         # get each row text from the csv file.
 
         # the first column in the text line is x value.
-        operation = self.df.loc[0][0]
+        operation = self.df.loc[0][0] 
         # the second column in the text line is y value.
         value_x = self.df.loc[0][1]
         value_y = self.df.loc[0][2]

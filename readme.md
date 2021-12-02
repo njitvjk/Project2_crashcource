@@ -4,9 +4,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/njitvjk/calc2/badge.svg?branch=branch1)](https://coveralls.io/github/njitvjk/calc2?branch=branch1)
 <br/>
 
-Also you can click below to view the build for this assignment<br/><br/>
-
-[build for assignmnet 1](https://app.travis-ci.com/github/njitvjk/calc2/builds/241320285)
 
 #### Operations
 Addition<br/>
@@ -32,15 +29,20 @@ Divison with exception for Division by zero
 3.tests/calculator_test.py- Pandas dataframe<br/>
 
 #### Build Screen shot <br/>
-![img_3.png](img_3.png)
+![image](https://user-images.githubusercontent.com/90334123/144356884-8cdd3f32-e3c3-40fe-84b7-ad74ce20b201.png)
 
-#### output
+
+
+#### Output
+Please click to view console output 
+
+[PANDA.pdf](https://github.com/njitvjk/Project2_crashcource/files/7638842/PANDA.pdf)
 
 #### Screenshots
-Watchdog
+Watchdog<br/>
 ![img.png](img.png)
-![img_1.png](img_1.png)
-logfile
+![img_1.png](img_1.png)<br/>
+logfile<br/>
 ![img_2.png](img_2.png)
 
 
