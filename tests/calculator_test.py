@@ -8,12 +8,10 @@ from calculator.calculator import Calculator
 class TestApp(unittest.TestCase):
     """Test for Calculator program"""
     # this is the Calculator class instance.
+     # pylint: disable=Method could be a function (no-self-use)
 
     calculator = None
-   
-    df = pd.read_csv('done/data.csv',sep=',', )  # pylint: disable=E1136  # pylint/issues/3139
-
-    # pylint: disable=Method could be a function (no-self-use)
+    df = pd.read_csv('done/data.csv',sep=',', )  
     #did not want to keep this function as method outside class hence disabling pylint error.I want to use as class method"
     def log_calc(self):
         """logger functionality setup"""
