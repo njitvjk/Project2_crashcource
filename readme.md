@@ -46,7 +46,7 @@ Please click to view console output
 #### Screenshots
 Watchdog<br/>
 ![img.png](img.png)
-![img_1.png](img_1.png)<br/>
+![image](https://user-images.githubusercontent.com/90334123/144513887-c09a9f07-d6f7-4683-ba66-b232eb036ee2.png)<br/>
 logfile<br/>
 ![image](https://user-images.githubusercontent.com/90334123/144478701-b40881ff-62a7-4032-9fe7-f050c8be71e9.png)
 
