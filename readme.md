@@ -1,10 +1,5 @@
 ### Assignment-5 CSV File Handling ,Design your own code
 
-[![Build Status](https://app.travis-ci.com/njitvjk/calc2.svg?branch=branch1)](https://app.travis-ci.com/njitvjk/calc2)
-[![Coverage Status](https://coveralls.io/repos/github/njitvjk/calc2/badge.svg?branch=branch1)](https://coveralls.io/github/njitvjk/calc2?branch=branch1)
-<br/>
-
-
 #### Operations
 Addition<br/>
 Subtraction<br/>
@@ -29,7 +24,8 @@ Divison with exception for Division by zero
 3.tests/calculator_test.py- Pandas dataframe<br/>
 
 #### Build Screen shot <br/>
-![image](https://user-images.githubusercontent.com/903341
+![image](https://user-images.githubusercontent.com/90334123/144361678-70e29b95-a71b-459b-91d7-dcc8af543e94.png)
+
 
 
 
@@ -43,7 +39,9 @@ Watchdog<br/>
 ![img.png](img.png)
 ![img_1.png](img_1.png)<br/>
 logfile<br/>
-![img_4.png](img_4.png)
+![image](https://user-images.githubusercontent.com/90334123/144478701-b40881ff-62a7-4032-9fe7-f050c8be71e9.png)
+
+
 
 
 
