@@ -7,14 +7,15 @@ from calculator.calculator import Calculator
 
 class TestApp(unittest.TestCase):
     """Test for Calculator program"""
+    # pylint: disable=Method could be a function (no-self-use)
     # this is the Calculator class instance.
 
     calculator = None
-    # pylint: disable=Value 'self.df' is unsubscriptable (unsubscriptable-object)
+
     df = pd.read_csv('done/data.csv',
                      sep=',', )
 
-    # pylint: disable=Method could be a function (no-self-use)
+
     def log_calc(self):
         logger = logging.getLogger('LoggingCalculatorResults')  # 1
         logger.setLevel(logging.INFO)  # 2
