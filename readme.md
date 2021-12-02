@@ -1,10 +1,5 @@
 ### Assignment-5 CSV File Handling ,Design your own code
 
-[![Build Status](https://app.travis-ci.com/njitvjk/calc2.svg?branch=branch1)](https://app.travis-ci.com/njitvjk/calc2)
-[![Coverage Status](https://coveralls.io/repos/github/njitvjk/calc2/badge.svg?branch=branch1)](https://coveralls.io/github/njitvjk/calc2?branch=branch1)
-<br/>
-
-
 #### Operations
 Addition<br/>
 Subtraction<br/>
