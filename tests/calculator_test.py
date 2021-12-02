@@ -10,11 +10,13 @@ class TestApp(unittest.TestCase):
     # this is the Calculator class instance.
 
     calculator = None
-    # pylint: disable=Value 'self.df' is unsubscriptable (unsubscriptable-object)
+    df: dict[Any, Any]
+   
     df = pd.read_csv('done/data.csv',
                      sep=',', )
 
     # pylint: disable=Method could be a function (no-self-use)
+    #did not want to keep this function as method outside class hence disabling pylint error.I want to use as class method"
     def log_calc(self):
         """logger functionality setup"""
         logger = logging.getLogger('LoggingCalculatorResults')  # 1
