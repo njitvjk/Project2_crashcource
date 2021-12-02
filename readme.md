@@ -41,10 +41,10 @@ Please click to view console output
 [PANDA.pdf](https://github.com/njitvjk/Project2_crashcource/files/7638842/PANDA.pdf)
 
 #### Screenshots
-Watchdog
+Watchdog<br/>
 ![img.png](img.png)
 ![img_1.png](img_1.png)
-logfile
+logfile<br/>
 ![img_2.png](img_2.png)
 
 
