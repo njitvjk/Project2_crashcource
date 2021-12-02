@@ -29,7 +29,7 @@ Divison with exception for Division by zero
 3.tests/calculator_test.py- Pandas dataframe<br/>
 
 #### Build Screen shot <br/>
-![image](https://user-images.githubusercontent.com/90334123/144356884-8cdd3f32-e3c3-40fe-84b7-ad74ce20b201.png)
+![image](https://user-images.githubusercontent.com/903341
 
 
 
@@ -43,8 +43,7 @@ Watchdog<br/>
 ![img.png](img.png)
 ![img_1.png](img_1.png)<br/>
 logfile<br/>
-![img_2.png](img_2.png)
-
+![img_4.png](img_4.png)
 
 
 
