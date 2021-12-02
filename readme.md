@@ -29,7 +29,8 @@ Divison with exception for Division by zero
 3.tests/calculator_test.py- Pandas dataframe<br/>
 
 #### Build Screen shot <br/>
-![image](https://user-images.githubusercontent.com/90334123/144354369-a8e7add2-4c9c-43b2-9897-d1caccff69ec.png)
+![image](https://user-images.githubusercontent.com/90334123/144356884-8cdd3f32-e3c3-40fe-84b7-ad74ce20b201.png)
+
 
 
 #### Output
