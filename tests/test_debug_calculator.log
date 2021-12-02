@@ -1,0 +1,5 @@
+2021-12-02 12:51:01,888 - INFO - Operation ADDITION ,Input file data.csv ,Record 0,Sum of 3 by 4 is 7
+2021-12-02 12:51:01,889 - INFO - Operation SUBTRACTION ,Input file data.csv ,Record 1,Difference of 6 by 5 is 1
+2021-12-02 12:51:01,889 - INFO - Operation MULTIPLICATION ,Input file data.csv ,Record 2,Product of 2 by 3 is 6
+2021-12-02 12:51:01,889 - INFO - Operation DIVISION ,Input file data.csv ,Record 3,Division of 5 by 1 is 5
+2021-12-02 12:51:01,905 - INFO - Operation DIVISIONBYZERO ,Input file data.csv ,Record 4,Division of 2 by 0 is INVALID-ATTEMPT TO DIVIDE BY ZERO
