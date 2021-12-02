@@ -1,6 +1,8 @@
 """Tests file """
 import logging
 import unittest
+from typing import Dict, Any
+
 import pandas as pd
 from calculator.calculator import Calculator
 
