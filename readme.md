@@ -32,7 +32,8 @@ Divison with exception for Division by zero
 3.tests/calculator_test.py- Pandas dataframe<br/>
 
 #### Build Screen shot <br/>
-![img_3.png](img_3.png)
+![image](https://user-images.githubusercontent.com/90334123/144354369-a8e7add2-4c9c-43b2-9897-d1caccff69ec.png)
+
 
 #### Output
 Please click to view console output 
