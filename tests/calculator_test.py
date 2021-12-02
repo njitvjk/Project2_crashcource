@@ -136,5 +136,8 @@ class TestApp(unittest.TestCase):
         operation, 'data.csv', df[df['OPERATION'] == 'DIVISIONBYZERO'].index[0], x, y, 'INVALID-ATTEMPT TO DIVIDE BY ZERO'))
         self.assertRaises(Exception, result)
 
+if __name__ == '__main__':
+    unittest.main()
+
 
 
