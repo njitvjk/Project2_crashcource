@@ -1,15 +1,16 @@
 ### Assignment-5 CSV File Handling ,Design your own code
 
-#### Operations
+### Operations
 Addition<br/>
 Subtraction<br/>
 Mulitplication<br/>
 Divison with exception for Division by zero
 
 ### Tasks
-1.Watchdog implementation to move file from input to done folder<br/>
-2.pandas dataframe has been implemented for Arithematic operations<br/>
-3.Logging mechanism at level INFO has been implemented to capture log result and exceptions<br/> 
+1. Watchdog implementation to move file from input to done folder<br/>
+2. pandas dataframe has been implemented for Arithematic operations<br/>
+
+3. Logging mechanism at level INFO has been implemented to capture log result and exceptions<br/> 
     a.timestamp<br/>
     b.Input file name <br/>
     c.Operation<br/>
@@ -19,9 +20,11 @@ Divison with exception for Division by zero
 
 
 #### Files for this assignment to review code
-1.calculator/main.py- Watchdog<br/>
-2.calculator/calculator.py-Contains all arithematic operations<br/>
-3.tests/calculator_test.py- Pandas dataframe<br/>
+1. calculator/main.py- Watchdog<br/>
+2. calculator/calculator.py-Contains all arithematic operations<br/>
+3. tests/calculator_test.py- Pandas dataframe<br/>
+4. test/test_debug_calculator.log-log file<br/>
+5. done/data.csv-input data <br/>
 
 #### Build Screen shot <br/>
 COVERAGE 100%<BR/>
