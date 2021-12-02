@@ -14,8 +14,8 @@ class Handler(FileSystemEventHandler):
             os.rename(src, new_dest)
 
 
-folder_to_track = 'C:/Users/thiya/PycharmProjects/Project2_crashcource/input'
-folder_destination = 'C:/Users/thiya/PycharmProjects/Project2_crashcource/done'
+folder_to_track = 'input'
+folder_destination = 'done'
 observer = Observer()
 event_handler = Handler()
 observer.schedule(event_handler, folder_to_track)
