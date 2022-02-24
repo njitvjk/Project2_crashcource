@@ -186,5 +186,5 @@ class TestApp(unittest.TestCase):
                          value_x,
                          value_y,
                          'INVALID-ATTEMPT TO DIVIDE BY ZERO')
-        self.assertEqual(result, expect_result)
+        self.assertEqual(str(result).strip(), expect_result)
         # self.assertRaises(Exception, result)

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>question1.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #629755; font-style: italic;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+question1.py</font>
+</center></td></tr></table>
+<pre><span class="s0">&quot;&quot;&quot;Question 1- this function takes 5 arguments - states and returns a list. 
+prefix * has been used to receive multiple arguments&quot;&quot;&quot;</span>
+
+
+<span class="s2">def </span><span class="s1">return_states(*states):</span>
+    <span class="s1">state_list = []</span>
+    <span class="s2">for </span><span class="s1">i </span><span class="s2">in </span><span class="s1">states:</span>
+        <span class="s1">state_list.append(i)</span>
+
+    <span class="s2">return </span><span class="s1">state_list</span>
+
+
+<span class="s3">&quot;&quot;&quot;passing states to function&quot;&quot;&quot;</span>
+<span class="s1">st_list = return_states(</span><span class="s3">&quot;AL&quot;</span><span class="s2">, </span><span class="s3">&quot;CA&quot;</span><span class="s2">, </span><span class="s3">&quot;GA&quot;</span><span class="s2">, </span><span class="s3">&quot;NJ&quot;</span><span class="s2">, </span><span class="s3">&quot;FL&quot;</span><span class="s1">)</span>
+<span class="s1">print(</span><span class="s3">f&quot;The states in the list are </span><span class="s2">{</span><span class="s1">st_list</span><span class="s2">}</span><span class="s3">&quot;</span><span class="s1">)</span>
+</pre>
+</body>
+</html>

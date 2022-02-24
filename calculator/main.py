@@ -15,8 +15,8 @@ class Handler(FileSystemEventHandler):
             os.rename(src, new_dest)
 
 
-FOLDER_TO_TRACK = 'input'
-FOLDER_DESTINATION = 'done'
+FOLDER_TO_TRACK = '../input'
+FOLDER_DESTINATION = '../done'
 observer = Observer()
 event_handler = Handler()
 observer.schedule(event_handler, FOLDER_TO_TRACK)
